@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joyeux Anniversaire ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="margin:0; overflow:hidden;">
+  <main id="app">
+
+    <!-- Écran d’intro -->
+    <section class="screen active" id="screen-intro">
+      <div class="card">
+        <h1 class="title">Coucou ma tante 💗</h1>
+        <p class="subtitle">J’ai une mini surprise… mais d’abord, quelques questions 😌</p>
+        <button class="btn primary" id="startBtn">Commencer</button>
+      </div>
+    </section>
+
+    <!-- Écran questions -->
+    <section class="screen" id="screen-quiz">
+      <div class="card">
+        <div class="progress" id="progress"></div>
+        <h2 class="question" id="questionText"></h2>
+
+        <div class="buttons">
+          <button class="btn" id="noBtn">Non</button>
+          <button class="btn primary" id="yesBtn">Oui</button>
+        </div>
+
+        <p class="tiny" id="hint"></p>
+      </div>
+    </section>
+
+    <!-- Écran final -->
+    <section class="screen" id="screen-finale">
+      <div class="bg-sparkles" aria-hidden="true"></div>
+
+      <div class="finale-overlay">
+        <h1 class="finale-title" id="finaleTitle">Joyeux Anniversaire 🎉</h1>
+        <p class="finale-sub" id="finaleMessage">
+          Merci d’être une personne incroyable. Je t’aime fort. 💖
+        </p>
+
+        <!-- Slideshow -->
+        <div class="slideshow" aria-label="Diaporama de photos">
+          <img class="slide active" src="images/aunt1.jpeg" alt="Photo 1">
+          <img class="slide" src="images/aunt2.jpeg" alt="Photo 2">
+          <img class="slide" src="images/aunt3.jpeg" alt="Photo 3">
+
+          <div class="slide-dots" id="dots"></div>
+        </div>
+
+        <p class="tiny finale-tiny">✨ (Astuce: laisse tourner — les photos changent toutes seules)</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
