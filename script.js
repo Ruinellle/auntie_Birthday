@@ -253,3 +253,4 @@ function spawnKiss(){
 
 // utils
 function rand(a,b){ return a + Math.random()*(b-a); }
+
