@@ -3,57 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Joyeux Anniversaire ✨</title>
+  <title>Afaf — Sana Sa3ida ✨</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body style="margin:0; overflow:hidden;">
+<body style="margin:0; overflow:hidden; background:#140a02;">
   <main id="app">
 
-    <!-- Écran d’intro -->
-    <section class="screen active" id="screen-intro">
-      <div class="card">
-        <h1 class="title">Coucou ma tante 💗</h1>
-        <p class="subtitle">J’ai une mini surprise… mais d’abord, quelques questions 😌</p>
-        <button class="btn primary" id="startBtn">Commencer</button>
+    <!-- Intro -->
+    <section class="screen active" id="screen-intro" aria-label="Intro">
+      <div class="lanterns" aria-hidden="true"></div>
+
+      <div class="card intro-card">
+        <h1 class="title shimmer">Waaa Afaf 💛</h1>
+        <p class="subtitle">Sana sa3ida ✨ (et j’ai une mini surprise…)</p>
+        <p class="tiny">Clique pour commencer 😌</p>
+        <button class="btn primary big" id="startBtn">Commencer</button>
       </div>
     </section>
 
-    <!-- Écran questions -->
-    <section class="screen" id="screen-quiz">
+    <!-- Quiz -->
+    <section class="screen" id="screen-quiz" aria-label="Questions">
       <div class="card">
         <div class="progress" id="progress"></div>
         <h2 class="question" id="questionText"></h2>
 
         <div class="buttons">
-          <button class="btn" id="noBtn">Non</button>
+          <button class="btn danger" id="noBtn">Non</button>
           <button class="btn primary" id="yesBtn">Oui</button>
         </div>
 
         <p class="tiny" id="hint"></p>
       </div>
+
+      <!-- FX layers -->
+      <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
     </section>
 
-    <!-- Écran final -->
-    <section class="screen" id="screen-finale">
-      <div class="bg-sparkles" aria-hidden="true"></div>
+    <!-- Finale -->
+    <section class="screen" id="screen-finale" aria-label="Finale">
+      <div class="finale-bg" aria-hidden="true"></div>
+
+      <!-- floating kisses -->
+      <div class="kisses-layer" id="kissesLayer" aria-hidden="true"></div>
+
+      <!-- Photos will be generated here -->
+      <div class="photo-layer" id="photoLayer" aria-hidden="true"></div>
 
       <div class="finale-overlay">
-        <h1 class="finale-title" id="finaleTitle">Joyeux Anniversaire 🎉</h1>
-        <p class="finale-sub" id="finaleMessage">
-          Merci d’être une personne incroyable. Je t’aime fort. 💖
+        <h1 class="finale-title shimmer">Joyeux Anniversaire Afaf 🎉</h1>
+        <p class="finale-sub">
+          Que Dieu te garde, que ta vie soit douce et remplie de joie. 💛
         </p>
-
-        <!-- Slideshow -->
-        <div class="slideshow" aria-label="Diaporama de photos">
-          <img class="slide active" src="images/aunt1.jpeg" alt="Photo 1">
-          <img class="slide" src="images/aunt2.jpeg" alt="Photo 2">
-          <img class="slide" src="images/aunt3.jpeg" alt="Photo 3">
-
-          <div class="slide-dots" id="dots"></div>
-        </div>
-
-        <p class="tiny finale-tiny">✨ (Astuce: laisse tourner — les photos changent toutes seules)</p>
+        <p class="tiny finale-tiny">Avec beaucoup d’amour ✨</p>
       </div>
     </section>
 
