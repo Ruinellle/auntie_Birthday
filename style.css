@@ -254,3 +254,4 @@ body{overflow:hidden; color:var(--text);}
   15%  { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   100% { opacity: 0; transform: translate(var(--kx), var(--ky)) scale(.95); }
 }
+
